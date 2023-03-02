@@ -14,6 +14,7 @@ namespace Quest
             //   the text of the challenge
             //   a correct answer
             //   a number of awesome points to gain or lose depending on the success of the challenge
+          
             repeat:
             Challenge twoPlusTwo = new Challenge("2 + 2?", 4, 10);
             Challenge theAnswer = new Challenge(
@@ -40,16 +41,31 @@ namespace Quest
             // Here we set some reasonable min and max values.
             //  If an Adventurer has an Awesomeness greater than the max, they are truly awesome
             //  If an Adventurer has an Awesomeness less than the min, they are terrible
-            int minAwesomeness = 0;
-            int maxAwesomeness = 100;
+            
+            
+
 
             // Make a new "Adventurer" object using the "Adventurer" class
+            int minAwesomeness = 0;
+            int maxAwesomeness = 100;
             Console.WriteLine("What's your name, adventurer?");
             string AName = Console.ReadLine();
-            Adventurer theAdventurer = new Adventurer(AName);
+            Robe colorfulRobe = new Robe
+            {
+                Colors = new List<string> {"red", "green"},
+                Length = 72
+            };
+            Hat myLittleHat = new Hat
+            {
+                Shininess = 6
+            };
+            Adventurer theAdventurer = new Adventurer(AName, colorfulRobe, myLittleHat );
+            
+            
 
             // A list of challenges for the Adventurer to complete
             // Note we can use the List class here because have the line "using System.Collections.Generic;" at the top of the file.
+            theAdventurer.getDescription();
             List<Challenge> challenges = new List<Challenge>()
             {
                 twoPlusTwo,
