@@ -61,9 +61,7 @@ namespace Quest
             };
             Adventurer theAdventurer = new Adventurer(AName, colorfulRobe, myLittleHat );
             
-            
-
-            // A list of challenges for the Adventurer to complete
+             // A list of challenges for the Adventurer to complete
             // Note we can use the List class here because have the line "using System.Collections.Generic;" at the top of the file.
             theAdventurer.getDescription();
             List<Challenge> challenges = new List<Challenge>()
