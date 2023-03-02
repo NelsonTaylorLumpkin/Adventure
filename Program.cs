@@ -59,6 +59,7 @@ namespace Quest
             {
                 Shininess = 6
             };
+            string gamePrize = new Prize();
             Adventurer theAdventurer = new Adventurer(AName, colorfulRobe, myLittleHat );
             
              // A list of challenges for the Adventurer to complete
